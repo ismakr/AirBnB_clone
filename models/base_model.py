@@ -21,7 +21,8 @@ class BaseModel:
                     self.__dict__[k] = datetime.strptime(v, time_f)
                 else:
                     self.__dict__[k] = v
-        models.storage.new(self)
+        else:
+            models.storage.new(self)
 
     def __str__(self):
         """return str"""
