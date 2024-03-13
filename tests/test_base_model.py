@@ -15,6 +15,10 @@ class base_model(unittest.TestCase):
         updated_at = my_model.save()
         self.assertNotEqual(created_at, updated_at)
 
+    def test_save_exit(self):
+        """test if save exits"""
+        self.assertEqual(hasattr(BaseModel, 'save'), True)
+
     def test_to_dict(self):
         """test to_dict method"""
         my_model = BaseModel()
